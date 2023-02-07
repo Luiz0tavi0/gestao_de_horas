@@ -22,8 +22,7 @@ class Config:
     # os.path.join(os.pardir, os.path.dirname(__file__))
     BASE_DIR = os.path.abspath(os.path.join(
         os.path.dirname(__file__), os.pardir))
-    SECRET_KEY = os.environ.get(
-        'SECRET_KEY',  r'rasdsadyCnZACKw3tkZ2uaasdasdN4lZefbO_rHPdbmkgDi6RvwSnZ7VPn04DjaY2asdasdXPe3kJr')
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     # SECRET_KEY = os.environ.get("SECRET_KEY")
 
     # REDIS Configuration
