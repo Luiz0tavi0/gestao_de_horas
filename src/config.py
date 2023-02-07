@@ -5,8 +5,7 @@ from datetime import timedelta
 
 class Config:
 
-    JWT_SECRET_KEY = os.environ.get(
-        'JWT_SECRET_KEY', r'ryCnaasfasdastkZ2uagN4l342ZefbO_rHdasdPdbmkgDfavwSnZ7VPn04DsfasjaY2XPe3kJr')
+    JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
     # PORT = int(os.environ.get('PORT', 5000))
     # DEBUG = os.environ.get('DEBUG') or False
     PROPAGATE_EXCEPTIONS = True
