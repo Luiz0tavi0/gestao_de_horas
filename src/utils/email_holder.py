@@ -54,7 +54,6 @@ def send_email(receiver_email: str, link_with_token: str):
     attach_file_to_email(message, 'src/utils/images/animated_header.gif',
                          {'Content-ID': '<animated_header>'})
 
-    password = 'mruifkepsorwsgyy'
     # Create secure connection with server and send email
     receiver_email = 'luiz_loon@yahoo.com.br'
     ctx = ssl.create_default_context()

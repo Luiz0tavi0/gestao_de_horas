@@ -9,20 +9,20 @@ class Config:
     # PORT = int(os.environ.get('PORT', 5000))
     # DEBUG = os.environ.get('DEBUG') or False
     PROPAGATE_EXCEPTIONS = True
-    # SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI', f"sqlite:///{LOCAL_DATABASE_URI}")
 
     # import ipdb;ipdb.set_trace()
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(
-        seconds=int(os.environ.get('JWT_ACCESS_TOKEN_EXPIRES', 7200)))
+        seconds=int(os.environ.get('JWT_ACCESS_TOKEN_EXPIRES', 7200))
+    )
     JWT_REFRESH_TOKEN_EXPIRES = timedelta(
-        hours=int(os.environ.get('JWT_REFRESH_TOKEN_EXPIRES', 6)))
+        hours=int(os.environ.get('JWT_REFRESH_TOKEN_EXPIRES', 6))
+    )
 
     # project root directory
-    # os.path.join(os.pardir, os.path.dirname(__file__))
     BASE_DIR = os.path.abspath(os.path.join(
-        os.path.dirname(__file__), os.pardir))
+        os.path.dirname(__file__), os.pardir)
+    )
     SECRET_KEY = os.environ.get('SECRET_KEY')
-    # SECRET_KEY = os.environ.get("SECRET_KEY")
 
     # REDIS Configuration
     REDIS_HOST = os.environ.get('REDIS_HOST')
