@@ -21,10 +21,7 @@ def send_template_email(template, to, subj, **kwargs):
 
 
 def send_email(receiver_email: str, link_with_token: str):
-    sender_email = "doneganskyylar@gmail.com"
 
-    password = r"W7d`RYx;Ty2=wM48!Fv*?NPe@)U#rk-z~9aAp^tZHfb+"
-    message = MIMEMultipart("alternative")
     message["Subject"] = "Password Reset"
     message["From"] = sender_email
     message["To"] = receiver_email
@@ -55,7 +52,7 @@ def send_email(receiver_email: str, link_with_token: str):
                          {'Content-ID': '<animated_header>'})
 
     # Create secure connection with server and send email
-    receiver_email = 'luiz_loon@yahoo.com.br'
+
     ctx = ssl.create_default_context()
     ipdb.set_trace()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ctx) as server:

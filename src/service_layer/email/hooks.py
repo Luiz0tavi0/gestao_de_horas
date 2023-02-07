@@ -4,6 +4,8 @@ import random
 
 from flask import Blueprint, request, jsonify, redirect, url_for, make_response, current_app, render_template
 
+from src.utils.email_holder import send_template_email
+
 
 class AccountDefaultHookSet(object):
 
